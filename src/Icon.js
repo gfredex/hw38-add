@@ -1,16 +1,17 @@
 import React from 'react'
 
 function ClonIcon(props) {
-    return React.cloneElement(props.children, { style: { backgroundImage: "URL(./icon.png)", height: "128px", width: "128px" }, })
+    return React.cloneElement(props.children, { style: { backgroundImage: props.bgImg, height: "128px", width: "128px" }, })
 }
 
-function Icon() {
+function Icon(props) {
+
     return (
         <div>
-            <ClonIcon>
+            <ClonIcon bgImg={props.bgImg}>
                 <div></div>
             </ClonIcon>
-        </div>
+        </div >
     )
 }
 
